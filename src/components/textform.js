@@ -29,7 +29,7 @@ export default function TextForm(props) {
       <div className='conatainer'>
         <h1>{props.heading}</h1>
         
-        <textarea className='form-control' id="myBox" rows="8" value={text} onChange={handleOnChange}></textarea>
+        <textarea className='form-control' id="myBox" rows="8" value={text} onChange={handleOnChange}style={{backgroundColor:props.mode==='light'?'dark':'light'}}></textarea>
          <button className="btn btn-primary my-3" onClick={handleUpClick}>Convert to upper case</button>
       <button className="btn btn-primary mx-3 my-3" onClick={handleLoClick}>Convert to lower case</button>
       <button className="btn btn-primary  my-3" onClick={copyText}>Copy text</button>
