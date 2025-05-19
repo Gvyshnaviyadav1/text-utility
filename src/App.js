@@ -3,11 +3,11 @@ import Navbar from './components/Navbar';
 import TextForm from './components/textform';
 import About from './components/About';
 import React, { useState } from 'react';
-import {
+{/*import {
   BrowserRouter as Router,
   Routes,
   Route
-} from "react-router-dom";
+} from "react-router-dom";*/}
 
 function App() {
   const [mode, setMode] = useState('light');
@@ -23,17 +23,18 @@ function App() {
   };
 
   return (
-    <Router>
+    //<Router>
       <>
         <Navbar title="TextReframe" toggleMode={toggleMode} mode={mode} />
         <div className='container my-3'>
-          <Routes>
+          {/*<Routes>
             <Route path="/about" element={<About />} />
-            <Route path="/" element={<TextForm heading="Enter the required text" mode={mode} />} />
-          </Routes>
+            <Route path="/" element={} />
+          </Routes>*/}
+          <TextForm heading="Enter the required text" mode={mode} />
         </div>
       </>
-    </Router>
+    //</Router>
   );
 }
 
